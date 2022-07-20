@@ -1,51 +1,56 @@
-#header{
+.header{
     flex: 0 0 $header-size;
+    z-index: 999;
 
-    h1{
-        font-family: 'Amatic SC', cursive;
+    @media (max-width: $tablet-view){
+        flex: 0 0 50px;
+    }
+    
+    .toggle{
+        display: none;
+        
+        @media (max-width: $tablet-view){
+            display: block;
+        }
     }
 
     .menu{
-        width: 40%;
-        transition: 0.6s all;
-        
-        &-item{
-            list-style: none;
-            @media (max-width: $tablet-view){
-                padding: 2rem 0;
-            }
-        }
-        &-link{
-            text-decoration: none;
-            font-size: 1.2rem;
-            
-            @media (max-width: $tablet-view){
-                color: white;
-            }
-        }
 
+        transition: $transition;
         @media (max-width: $tablet-view){
             position: absolute;
-            flex-direction: column;
-            width: 100%;
-            text-align: center;
-            margin-left:-3rem;
-            top: -1000px;
-            padding: 15rem 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 500px;
+            padding: 5rem 0;
             background-color: $primary;
-            z-index: 999;
+            transform: translateY(-150%);
         }
-    }
+    
+        &-items{
+            list-style: none;
+        }
 
-    .toggle{
-        display: none;
+        &-link{
+            color: white;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            transition: $transition;
+            cursor: pointer;
 
-        @media (max-width: $tablet-view){
-            display: block;
+            @media (max-width: $tablet-view){
+                color: black;
+            }
+
+            &:hover{
+                color: $primary;
+            }
         }
     }
 }
 
 #hamburger:checked ~ .menu{
-    top: 70px;
+    transform: translateY(36px);
 }
