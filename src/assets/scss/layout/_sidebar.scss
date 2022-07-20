@@ -1,0 +1,12 @@
+#sidebar{
+    flex: 0 0 $sidebar-width;
+    transition: 0.6s all;
+
+    @media (max-width: $tablet-view){
+        position: absolute;
+        z-index: 999;
+        min-height: 100%;
+        transform: translateX(-100%);
+        width: $sidebar-width;
+    }
+}

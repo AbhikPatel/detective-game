@@ -1,0 +1,34 @@
+.mobile{
+    height: 700px;
+    width: 350px;
+    border-radius: 20px;
+    background-color: black;
+
+    &-screen{
+        background-color: white;
+        border-radius: 10px;
+
+        @media(max-width: $mobile-view){
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0px;
+        }
+    }
+
+    &-notification{
+        background-color: #313131;
+        flex: 0 0 30px;
+    }
+    
+    &-toggle{
+        flex: 0 0 30px;
+        background-color: #313131;
+    }
+}
+
+#toggle:checked ~ #sidebar{
+    transform: translateX(0px);
+}

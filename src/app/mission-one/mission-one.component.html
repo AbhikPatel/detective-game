@@ -1,0 +1,29 @@
+<div class="dashboard h-100 d-flex overflow-hidden position-relative">
+    <input type="checkbox" class="d-none" id="toggle">
+    <div id="sidebar" class="bg-primary d-flex flex-column justify-content-between py-5 px-4">
+        <div class="text-center text-white overflow-auto">
+            <h3> Think You got it? </h3>
+            <p> Type the phone owner's address below, and we will check it for you. </p>
+            <input type="text" class="form-control my-4" placeholder="Street name and number">
+            <button class="btn btn-success"> Check Answer </button>
+        </div>
+        <button class="btn btn-danger w-100"> Leave Mission </button>
+    </div>
+    <div class="flex-grow-1 py-5 overflow-auto">
+        <div class="mobile mx-auto p-3">
+            <div class="mobile-screen d-flex flex-column h-100 overflow-hidden">
+                <div class="mobile-notification px-3 text-white d-flex justify-content-between">
+                    <p> 15:31 </p>
+                </div>
+                <div class="flex-grow-1 overflow-auto">
+                    <router-outlet></router-outlet>
+                </div>
+                <div class="mobile-toggle px-2 d-flex text-white justify-content-around align-items-center">
+                    <i class='bx bx-left-arrow-alt fs-5'></i>
+                    <i class='bx bx-square-rounded fs-5'></i>
+                    <label for="toggle"><i class='bx bx-transfer-alt fs-5'></i></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
