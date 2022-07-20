@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mission-one',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MissionOneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
 
+  public onLeave(){
+    this.route.navigateByUrl('landing')
+  }
 }

@@ -1,11 +1,18 @@
 .landing{
 
     .home{
-        width: 100%;
-        padding: 0 5rem;
+        padding: 5rem;
 
+        @media (max-width: $tablet-view){
+            padding: 5rem 2rem;
+        }
+        
         &-img{
             width: 300px;
+
+            @media (max-width: $mobile-view){
+                width: 200px;
+            }
         }
     }
 }

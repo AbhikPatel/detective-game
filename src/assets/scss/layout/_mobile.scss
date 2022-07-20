@@ -26,7 +26,12 @@
     &-toggle{
         flex: 0 0 30px;
         background-color: #313131;
+        
+        @media(max-width:$mobile-view){
+            z-index: 999;
+        }
     }
+
 }
 
 #toggle:checked ~ #sidebar{
