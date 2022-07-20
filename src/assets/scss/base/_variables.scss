@@ -1,1 +1,21 @@
 // All the SCSS Variables goes here
+
+// font 
+$font-family                            : 'Poppins', sans-serif;
+
+// header
+$header-size                            : 70px; 
+
+// nav 
+$nav-link-padding-x                     : 3rem;
+$nav-link-font-size                     : 1.25rem;
+
+// media 
+$mobile-view                            : 576px;
+$tablet-view                            : 768px;
+$laptop-view                            : 992px;
+$large-laptop                           : 1024px;
+
+// card 
+$card-height                            : 400px;
+$card-border-width                      : 0px;
