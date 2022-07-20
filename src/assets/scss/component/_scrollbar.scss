@@ -1,0 +1,35 @@
+::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-width;
+
+    &-thumb {
+        background-color: $primary;
+        border-radius: 12px;
+    }
+
+    &-button {
+        visibility: hidden;
+        height: $scrollbar-width;
+        width: $scrollbar-width;
+
+        &:vertical:start:increment,
+        &:vertical:end:decrement,
+        &:horizontal:start:increment,
+        &:horizontal:end:decrement {
+            display: none;
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: $tablet-view) {
+    ::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+
+        &-button {
+            height: 2px;
+            width: 2px;
+        }
+    }
+}
