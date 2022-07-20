@@ -1,6 +1,7 @@
 #sidebar{
     flex: 0 0 $sidebar-width;
     transition: 0.6s all;
+    // background-color: $dashboard-bg;
 
     @media (max-width: $tablet-view){
         position: absolute;

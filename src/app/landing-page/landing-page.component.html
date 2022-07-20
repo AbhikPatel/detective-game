@@ -1,60 +1,39 @@
-<!-- Start: Wrapper Section  -->
-<div class="wrapper h-100 d-flex flex-column overflow-hidden">
-    <!-- Start: Sidebar Section  -->
-    <div id="header" class="d-flex justify-content-between align-items-center px-5 position-relative shadow-sm">
-        <h1 class="text-primary fw-bolder"> Phone Detective Game </h1>
-        <label for="hamburger" class="toggle"> <i class='bx bx-menu fs-4 text-primary'></i> </label>
-        <input type="checkbox" class="d-none" id="hamburger">
-        <ul class="menu mt-3 d-flex justify-content-between align-items-center">
-            <li class="menu-item">
-                <a class="menu-link">Home</a>
+<div class="wrapper h-100 d-flex flex-column position-relative overflow-hidden">
+    <div class="header bg-dark d-flex justify-content-between px-md-5 px-3 align-items-center shadow">
+        <h2 class="text-white"> BEDETE<span class="text-primary">CTIVE </span> </h2>
+        <label for="hamburger" class="toggle text-primary"> <i class='bx bx-menu fs-4'></i> </label>
+        <input type="checkbox" id="hamburger" class="d-none">
+        <ul class="menu mt-3 d-flex justify-content-between flex-column flex-md-row align-items-center">
+            <li class="menu-items">
+                <a class="menu-link"> Home </a>
             </li>
-            <li class="menu-item">
-                <a class="menu-link">Missions</a>
+            <li class="menu-items">
+                <a class="menu-link"> Missions </a>
             </li>
-            <li class="menu-item">
-                <a class="menu-link">About Us</a>
+            <li class="menu-items">
+                <a class="menu-link"> About Us </a>
             </li>
         </ul>
     </div>
-    <!-- End: Sidebar Section  -->
-    <!-- Start: landing Section  -->
-    <div class="landing overflow-auto flex-grow-1 h-100">
-
-        <!-- Home Section  -->
-        <div class="home h-100 position-relative">
-            <figure class="d-flex justify-content-end">
-                <img src="../../assets/images/landing page/wallpaper.jpg" class="home-img" alt="">
+    <div class="landing h-100 flex-grow-1 overflow-auto">
+        <div class="home h-100 d-flex justify-content-between align-items-center bg-dark">
+            <div class="home-content">
+                <h1 class="text-white"> Welcome to <span class="text-primary">Phone Detective Game</span> </h1>
+                <p class="text-white my-3">
+                    In each of the missions below, you will gain access to someone's phone. <br> your mission is to
+                    search the phone for clues, gather information and solve a mystery. <br>
+                    <span class="text-primary" style="font-size: 1.2rem;"> Do you have what it takes?! </span>
+                </p>
+            </div>
+            <figure>
+                <img src="../../assets/images/landing page/detective.png" class="home-img" alt="">
             </figure>
-            <div class="home-content position-absolute text-primary my-auto shadow rounded-3 border-primary">
-                <h1 class="home-content-title"> Welcome to Phone Detective Game </h1>
-                <p> In each of the missions below, you will gain access to someone's phone. <br> Your mission is to
-                    search the phone for clues, gather information and solve a mystery </p>
-            </div>
-        </div>
-
-        <!-- Mission Section  -->
-        <div class="mission-page py-3 h-100 overflow-hidden">
-            <h1 class="text-center text-primary"> Missions </h1>
-            <div class="row py-3 px-5">
-                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card position-relative overflow-hidden rounded-top">
-                        <img src="../../assets/images/landing page/mission-1.jpg" class="miss-image h-100" alt="">
-                        <div class="position-absolute w-100 bg-white card-body">
-                            <h2 class="card-title my-3"> #1 Introduction </h2>
-                            <p> This one is simple: you notice a lost phone on a bench. <br> Can you find the owner's
-                                address before they freak out? </p>
-                        </div>
-                        <div class="position-absolute m-auto start">
-                            <div class="h-100 d-flex justify-content-center align-items-center">
-                                <button class="btn btn-primary start-btn" routerLink="/one"> Start Mission </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    <!-- End: landing Section  -->
 </div>
-<!-- End: Wrapper Section  -->
+
+<!-- <p>
+    In each of the missions below, you will gain access to someone's phone. <br> your mission is to search the phone for
+    clues, gather information and solve a mystery.
+    Do you have what it takes?!
+</p> -->
