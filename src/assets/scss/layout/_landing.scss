@@ -55,17 +55,27 @@
         font-family: 'Amatic SC', cursive;
     }
 
-    &-body{
+    &-body {
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
-        top: 270px;
-        transition: 0.6s all;
+        bottom: 0px;
     }
 
-    &:hover{
-        box-shadow: 5px 5px 20px #a1a1a1;
-        .card-body{
-            top: 100px;
+    &:hover {
+        box-shadow: 10px 10px 20px #a1a1a1;
+
+        .start{
+            transform: translateY(0px);
         }
     }
+}
+
+.start {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    transition: 0.6s all;
+    transform: translateY(100%);
 }
