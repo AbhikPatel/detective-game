@@ -1,17 +1,79 @@
-.landing{
+.landing {
 
-    .home{
+    .home {
         padding: 5rem;
 
-        @media (max-width: $tablet-view){
-            padding: 5rem 2rem;
+        @media (max-width: $tablet-view) {
+            padding: 0 2rem;
         }
-        
-        &-img{
+
+        &-content {
+            max-width: 600px;
+
+            @media (max-width: $tablet-view) {
+                font-size: $font-size-sm;
+            }
+        }
+
+        &-img {
             width: 300px;
 
-            @media (max-width: $mobile-view){
+            @media (max-width: $mobile-view) {
                 width: 200px;
+            }
+        }
+    }
+
+    .mission {
+        &-title {
+            font-size: 2rem;
+
+            @media(max-width:$mobile-view){
+                font-size: 1.2rem;
+            }
+        }
+
+        &-img {
+            object-fit: cover;
+        }
+
+        .card {
+            max-height: 500px;
+            box-shadow: 5px 5px 20px #212121;
+            transition: $transition;
+
+            &-content {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+                transition: $transition;
+                transform: translateY(100%);
+
+                @media(max-width:$mobile-view){
+                    font-size: $font-size-sm;
+                }
+            }
+
+            &:hover {
+                box-shadow: 5px 5px 20px $primary;
+
+                .card-content {
+                    transform: translateY(0px);
+                }
+            }
+        }
+
+        .heading {
+            right: 0px;
+            top: 10px;
+            z-index: 99;
+            padding: 0.4rem 3rem 0.4rem 0.4rem;
+            font-size: 1.2rem;
+
+            @media(max-width:$mobile-view){
+                font-size: $font-size-sm;
             }
         }
     }
