@@ -16,25 +16,41 @@
         </ul>
     </div>
     <div class="landing h-100 flex-grow-1 overflow-auto">
-        <div class="home h-100 d-flex justify-content-between flex-md-row flex-column align-items-center bg-dark">
-            <div class="home-content text-md-start text-center">
+        <div class="home h-100 d-flex justify-content-sm-between justify-content-center flex-md-row flex-column align-items-center bg-dark">
+            <div class="home-content my-5 text-md-start text-center">
                 <h1 class="text-white"> Welcome to <span class="text-primary">Phone Detective Game</span> </h1>
                 <p class="text-white my-3">
-                    In each of the missions below, you will gain access to someone's phone. <br> your mission is to
+                    In each of the missions below, you will gain access to someone's phone. Your mission is to
                     search the phone for clues, gather information and solve a mystery. <br>
-                    <span class="text-primary" style="font-size: 1.2rem;"> Do you have what it takes?! </span>
                 </p>
+                <div class="text-primary" style="font-size: 1.2rem;"> Do you have what it takes?! </div>
                 <button class="btn btn-primary mt-3" routerLink="/one"> Start Mission </button>
             </div>
             <figure>
-                <img src="../../assets/images/landing page/detective.png" class="home-img" alt="">
+                <img src="../../assets/images/landing page/detective.png" class="home-img" alt="detective">
             </figure>
+        </div>
+        <div class="mission h-100 bg-dark p-5">
+            <div class="text-center">
+                <span class="mission-title text-primary"> Missions </span>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 col-lg-3 col-sm-6 position-relative">
+                    <span class="heading position-absolute bg-primary shadow"> #1 Introduction </span>
+                    <div class="card overflow-hidden position-relative">
+                        <img src="../../assets/images/landing page/mission-1.jpg" class="mission-img" alt="">
+                        <div class="card-content position-absolute">
+                            <div class="px-3 h-100 d-flex justify-content-between flex-column"
+                                style="padding-top: 5rem;">
+                                <p class="text-white"> This one is simple: you notice a lost phone on a bench. <br> Can
+                                    you find the
+                                    owner's address before they freak out? </p>
+                                <button class="btn btn-primary mb-3" routerLink="/one"> Start Mission </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<!-- <p>
-    In each of the missions below, you will gain access to someone's phone. <br> your mission is to search the phone for
-    clues, gather information and solve a mystery.
-    Do you have what it takes?!
-</p> -->
