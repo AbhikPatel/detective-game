@@ -2,6 +2,7 @@
 
     .home {
         padding: 5rem;
+        min-height: 100%;
 
         @media (max-width: $tablet-view) {
             padding: 0 2rem;
@@ -25,10 +26,12 @@
     }
 
     .mission {
+        min-height: 100%;
+
         &-title {
             font-size: 2rem;
 
-            @media(max-width:$mobile-view){
+            @media(max-width:$mobile-view) {
                 font-size: 1.2rem;
             }
         }
@@ -51,7 +54,7 @@
                 transition: $transition;
                 transform: translateY(100%);
 
-                @media(max-width:$mobile-view){
+                @media(max-width:$mobile-view) {
                     font-size: $font-size-sm;
                 }
             }
@@ -72,7 +75,7 @@
             padding: 0.4rem 3rem 0.4rem 0.4rem;
             font-size: 1.2rem;
 
-            @media(max-width:$mobile-view){
+            @media(max-width:$mobile-view) {
                 font-size: $font-size-sm;
             }
         }

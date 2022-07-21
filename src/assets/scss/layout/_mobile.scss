@@ -20,7 +20,9 @@
 
     &-notification{
         background-color: #313131;
-        flex: 0 0 30px;
+        // flex: 0 0 20px;
+        // font-size: $font-size-sm;
+        max-height: 30px;
     }
     
     &-toggle{
