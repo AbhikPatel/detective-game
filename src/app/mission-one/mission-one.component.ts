@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,12 +8,22 @@ import { Router } from '@angular/router';
 })
 export class MissionOneComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  public now: Date = new Date();
+  
+  constructor(private route: Router, private location: Location) {
+    setInterval(() => {
+      this.now = new Date();
+    }, 1);
+  }
 
   ngOnInit(): void {
   }
 
-  public onLeave(){
+  public onLeave() {
     this.route.navigateByUrl('landing')
+  }
+
+  public onBack() {
+    this.location.back();
   }
 }

@@ -1,0 +1,36 @@
+.chat {
+    background-color: #0f1d28;
+
+    &-topbar {
+        flex: 0 0 50px;
+        background-color: #233237;
+    }
+
+    &-img {
+        height: 30px;
+        width: 30px;
+    }
+
+    &-message {
+        font-size: $font-size-sm;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        max-width: 200px;
+    }
+
+    &-time {
+        right: 2px;
+        bottom: 2px;
+        font-size: 0.6rem;
+    }
+}
+
+.user {
+    background-color: #054640;
+    border-bottom-left-radius: 12px;
+}
+
+.sender {
+    border-bottom-right-radius: 12px;
+    background-color: #233237;
+}

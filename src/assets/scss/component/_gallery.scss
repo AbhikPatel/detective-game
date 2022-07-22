@@ -1,0 +1,12 @@
+.gallery{
+
+    &-img{
+        object-fit: contain;
+    }
+}
+
+.select{
+    position: absolute;
+    max-width: 300px;
+    max-height: 500px;
+}
