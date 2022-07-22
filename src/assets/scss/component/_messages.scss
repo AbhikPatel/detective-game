@@ -1,0 +1,12 @@
+.message{
+    background-color: #202d37;
+    &-img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    &-content{
+        background-color: #101e29;
+        font-size: $font-size-sm;
+    }
+}

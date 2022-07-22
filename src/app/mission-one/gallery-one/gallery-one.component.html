@@ -1,1 +1,8 @@
-<p>gallery-one works!</p>
+<div class="h-100 position-relative">
+    <h2 class="text-center py-4"> Images </h2>
+    <div class="row px-3 g-1">
+        <div class="col-4" *ngFor="let m of images, let i=index">
+            <img src="{{m.data}}" class="gallery-img w-100" alt="image" (click)="onclick(m.id)">
+        </div>
+    </div>
+</div>
