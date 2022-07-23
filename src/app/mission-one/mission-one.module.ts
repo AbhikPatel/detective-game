@@ -8,6 +8,7 @@ import { MessageChatOneComponent } from './message-chat-one/message-chat-one.com
 import { DadChatOneComponent } from './dad-chat-one/dad-chat-one.component';
 import { MomChatOneComponent } from './mom-chat-one/mom-chat-one.component';
 import { GalleryOneComponent } from './gallery-one/gallery-one.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { GalleryOneComponent } from './gallery-one/gallery-one.component';
   ],
   imports: [
     CommonModule,
-    MissionOneRoutingModule
+    MissionOneRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class MissionOneModule { }
