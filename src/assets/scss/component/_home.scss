@@ -29,3 +29,11 @@
         background-color: $clr-val;
     }
 }
+
+.modal-body{
+    font-size: 1.2rem;
+
+    @media (max-width: $tablet-view){
+        font-size: $font-size-sm;
+    }
+}
