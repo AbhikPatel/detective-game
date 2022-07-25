@@ -1,0 +1,12 @@
+<div class="main two h-100 p-4">
+    <div class="row g-4">
+        <div class="col-4" *ngFor="let data of application">
+            <div class="application text-white text-center cursor" routerLink="{{data.route}}">
+                <div class="application-icon icon-{{data.classname}} mb-1 d-flex w-100 mx-auto justify-content-center align-items-center">
+                    <i class='bx {{data.icon}} fs-1'></i>
+                </div>
+                <span> {{data.text}} </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,12 +1,10 @@
 .main{
-    background-image: url('../../images/mission-one/wallpaper.jpg');
     background-position: center;
     background-size: cover;
 
     .application{
 
         &-icon{
-            background-color: #4267B2;
             border-radius: 10px;
             height: 50px;
             max-width: 55px;
@@ -15,5 +13,19 @@
         span{
             font-size: $font-size-sm;
         }
+    }
+}
+
+.one{
+    background-image: url('../../images/mission-one/wallpaper.jpg');
+}
+
+.two{
+    background-image: url('../../images/mission-two/wallpaper.jpg');
+}
+
+@each $clr,$clr-val in $mission-two{
+    .icon-#{$clr}{
+        background-color: $clr-val;
     }
 }
