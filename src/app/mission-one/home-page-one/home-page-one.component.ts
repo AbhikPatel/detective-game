@@ -11,4 +11,18 @@ export class HomePageOneComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public application: any[] = [
+    {
+      classname: "message",
+      route: "/one/message",
+      icon: "bxs-message-rounded",
+      text: "Message"
+    },
+    {
+      classname: "gallery",
+      route: "/one/gallery",
+      icon: "bx-images",
+      text: "Photos"
+    },
+  ]
 }

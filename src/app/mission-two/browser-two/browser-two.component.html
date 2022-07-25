@@ -1,0 +1,15 @@
+<div class="h-100 note">
+    <div>
+        <input type="text" class="browser-input rounded-pill my-3 ms-2 px-4" placeholder="Search or type a URl" (click)="onSearch()">
+    </div>
+    <div class="px-5 py-3" *ngIf="!history">
+        <h4 class="py-3"> You are offline. </h4>
+        <p style="font-size: 0.8rem;"> Your recent searches are still available. <br> Click on the search bar to view them. </p>
+    </div>
+    <div class="p-3" *ngIf="history">
+        <div class="d-flex align-items-center my-3" *ngFor="let m of data">
+            <i class='bx bx-time-five fs-6 me-2'></i>
+            <span> {{m}} </span>
+        </div>
+    </div>
+</div>
