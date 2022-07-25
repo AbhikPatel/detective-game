@@ -58,13 +58,14 @@
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true" [ngClass]="leave ? 'd-block' : 'd-none'">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content py-3 px-2">
                 <div class="modal-body fs-4 mb-4">
                     Are you sure you want to leave this mission?
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" routerLink="/landing" data-bs-dismiss="modal">Yes</button>
-                    <button type="button" class="btn btn-danger" (click)="onNo()" >No</button>
+                <div class="d-flex justify-content-end gap-3 my-3 px-4">
+                    <button type="button" class="btn btn-primary" routerLink="/landing"
+                        data-bs-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-danger" (click)="onNo()">No</button>
                 </div>
             </div>
         </div>

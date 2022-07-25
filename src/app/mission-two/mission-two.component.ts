@@ -41,11 +41,14 @@ export class MissionTwoComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/one/home' && this.route.url != '/one/message')
+    if (this.route.url != '/two/home' && this.route.url != '/two/message' && this.route.url != '/two/note')
       this.location.back();
 
-    if (this.route.url === '/one/message')
-      this.route.navigateByUrl('/one/home')
+    if (this.route.url === '/two/message')
+      this.route.navigateByUrl('/two/home')
+
+    if (this.route.url === '/two/note')
+      this.route.navigateByUrl('/two/home')
   }
 
   public get getControls() {
@@ -53,7 +56,7 @@ export class MissionTwoComponent implements OnInit {
   }
 
   public onCheck() {
-    if (this.answerGroup.value.ans === 'Park st 30') {
+    if (this.answerGroup.value.ans === 'Hotel Indigo, berlin') {
       this.demo = true;
       this.sheet = true;
       setTimeout(() => {
