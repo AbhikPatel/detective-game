@@ -1,17 +1,15 @@
 <div class="dashboard h-100 d-flex overflow-hidden position-relative">
-    <div class="sheet position-absolute" *ngIf="sheet">
-
-    </div>
+    <div class="sheet position-absolute" *ngIf="sheet"></div>
     <input type="checkbox" class="d-none" id="toggle">
     <div id="sidebar" class="d-flex flex-column bg-primary justify-content-between py-5 px-4">
         <div class="text-center text-dark overflow-auto">
             <h3> Think You got it? </h3>
             <p> Type the phone owner's address below, and we will check it for you. </p>
-            <form [formGroup]="answerGroup" class="my-4">
+            <form [formGroup]="answerGroup" class="my-4 d-flex flex-column text-center">
                 <input type="text" class="form-control mb-2" placeholder="Street name and number" formControlName='ans'>
-                <span class="text-danger" *ngIf="!demo && getControls['ans'].touched"> Wrong Answer </span>
+                <span class="text-danger" [ngClass]="!demo && getControls['ans'].valid && getControls['ans'].touched  ? 'visible' : 'invisible'"> Wrong Answer </span>
+                <button class="btn btn-success mt-3" type="submit" (click)="onCheck()"> Check Answer </button>
             </form>
-            <button class="btn btn-success" type="submit" (click)="onCheck()"> Check Answer </button>
         </div>
         <button class="btn btn-danger w-100" (click)="onLeave()"> Leave Mission </button>
     </div>
@@ -44,7 +42,7 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         [ngClass]="demo ? 'd-block' : 'd-none'">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content bg-dark text-white glow">
                 <div class="modal-body text-center d-flex flex-column py-5 fs-4">
                     <img src="../../assets/images/mission-one/congratulations.gif"
                         style="max-width: 150px; margin: auto;" alt="">
@@ -58,7 +56,7 @@
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true" [ngClass]="leave ? 'd-block' : 'd-none'">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content py-3 px-2">
+            <div class="modal-content bg-dark text-white glow py-3 px-2">
                 <div class="modal-body fs-4 mb-4">
                     Are you sure you want to leave this mission?
                 </div>
@@ -66,6 +64,19 @@
                     <button type="button" class="btn btn-primary" routerLink="/landing"
                         data-bs-dismiss="modal">Yes</button>
                     <button type="button" class="btn btn-danger" (click)="onNo()">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade pt-5" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" [ngClass]="tutorial ? 'd-block' : 'd-none'">
+        <div class="modal-dialog pt-5">
+            <div class="modal-content bg-dark text-white glow py-3 px-2">
+                <div class="modal-body mb-4">
+                    Note: Using this button (<i class="bx bx bx-transfer-alt"></i>) on the bottom of the device will
+                    toggle the sidebar
                 </div>
             </div>
         </div>

@@ -14,3 +14,19 @@ html,body{
 .cursor{
     cursor: pointer;
 }
+
+.btn{
+    font-size: 1rem;
+    @media(max-width: $tablet-view){
+        font-size: $font-size-sm;
+    }
+}
+
+.glow{
+    box-shadow: 2px 2px 10px $primary;
+    z-index: 20;
+}
+
+.active{
+    border-bottom: 1px solid $primary;
+}

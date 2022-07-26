@@ -13,6 +13,7 @@ export class MissionOneComponent implements OnInit {
   public demo: boolean = false;
   public leave: boolean = false;
   public sheet: boolean = false;
+  public tutorial: boolean = false;
   public answerGroup!: FormGroup;
 
   constructor(private route: Router, private location: Location, private fb: FormBuilder) {
@@ -20,6 +21,12 @@ export class MissionOneComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.sheet = true;
+    this.tutorial = true;
+    setTimeout(() => {
+      this.sheet = false;
+      this.tutorial = false;
+    },5000)
   }
 
   public prop() {
@@ -30,9 +37,6 @@ export class MissionOneComponent implements OnInit {
     this.answerGroup = this.fb.group({
       ans: ['', [Validators.required]]
     })
-
-    console.log(this.route.url);
-
   }
 
   public onLeave() {
@@ -53,7 +57,14 @@ export class MissionOneComponent implements OnInit {
   }
 
   public onCheck() {
-    if (this.answerGroup.value.ans === 'Park st 30') {
+    let answer = this.answerGroup.value.ans.trim();
+    answer = answer.split(/[ ,]+/);
+
+    for (let i = 0; i < answer.length; i++) {
+      answer[i] = answer[i].charAt(0).toUpperCase() + answer[i].substr(1);
+    }
+
+    if (answer.toString() === 'Park,St,30') {
       this.demo = true;
       this.sheet = true;
       setTimeout(() => {
