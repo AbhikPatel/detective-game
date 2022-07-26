@@ -24,4 +24,9 @@ html,body{
 
 .glow{
     box-shadow: 2px 2px 10px $primary;
+    z-index: 20;
+}
+
+.active{
+    border-bottom: 1px solid $primary;
 }

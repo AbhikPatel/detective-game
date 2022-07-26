@@ -3,12 +3,12 @@
         <h2 class="text-white"> BEDETE<span class="text-primary">CTIVE </span> </h2>
         <label for="hamburger" class="toggle text-primary"> <i class='bx bx-menu fs-4'></i> </label>
         <input type="checkbox" id="hamburger" class="d-none">
-        <ul class="menu mt-3 d-flex justify-content-between flex-column flex-md-row align-items-center">
+        <ul class="menu mt-3 d-flex justify-content-between flex-column flex-md-row align-items-center me-1">
             <li class="menu-items">
-                <a class="menu-link"> Home </a>
+                <a class="menu-link" (click)="scrollToElement(homes)" routerLinkActive="active" > Home </a>
             </li>
             <li class="menu-items">
-                <a class="menu-link"> Missions </a>
+                <a class="menu-link" (click)="scrollToElement(missions)" routerLinkActive="active"> Missions </a>
             </li>
             <li class="menu-items">
                 <a class="menu-link"> About Us </a>
@@ -16,7 +16,7 @@
         </ul>
     </div>
     <div class="landing h-100 flex-grow-1 overflow-auto">
-        <div class="home d-flex justify-content-sm-between justify-content-center flex-md-row flex-column align-items-center bg-dark">
+        <div #homes class="home d-flex justify-content-sm-between justify-content-center flex-md-row flex-column align-items-center bg-dark">
             <div class="home-content my-5 text-md-start text-center">
                 <h1 class="text-white"> Welcome to <span class="text-primary">Phone Detective Game</span> </h1>
                 <p class="text-white my-3">
@@ -24,13 +24,13 @@
                     search the phone for clues, gather information and solve a mystery. <br>
                 </p>
                 <div class="text-primary" style="font-size: 1.2rem;"> Do you have what it takes?! </div>
-                <button class="btn btn-primary mt-3" routerLink="/one"> Start Mission </button>
+                <button class="btn btn-primary mt-3" (click)="scrollToElement(missions)"> Start Mission </button>
             </div>
             <figure>
                 <img src="../../assets/images/landing-page/detective.png" class="home-img" alt="detective">
             </figure>
         </div>
-        <div class="mission bg-dark p-4 p-lg-5">
+        <div #missions class="mission bg-dark p-4 p-lg-5">
             <div class="text-center">
                 <span class="mission-title text-primary"> Missions </span>
             </div>

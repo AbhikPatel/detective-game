@@ -46,4 +46,7 @@ export class LandingPageComponent implements OnInit {
     },
   ]
 
+  public scrollToElement($element:any): void {
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
 }
