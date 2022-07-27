@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PincodeService } from '../service/pincode.service';
 
 @Component({
   selector: 'app-gallery-three',
@@ -9,7 +10,9 @@ export class GalleryThreeComponent implements OnInit {
   public open: boolean = false;
   public num: any;
 
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
   }

@@ -26,7 +26,7 @@ export class HomePageThreeComponent implements OnInit {
     },
     {
       classname: "gallery",
-      route: "/three/gallery",
+      route: "/three/pin-code",
       icon: "bx-images",
       text: "Photos"
     },

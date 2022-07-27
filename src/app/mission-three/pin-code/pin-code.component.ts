@@ -9,7 +9,8 @@ import { PincodeService } from '../service/pincode.service';
 export class PinCodeComponent implements OnInit {
 
   public pincode:any = [];
-  constructor(private service:PincodeService, private route: Router) { }
+  public animation = false;
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,12 +21,20 @@ export class PinCodeComponent implements OnInit {
 
   public onPin(id:number){
     this.pincode.push(id);
+    
     if(this.pincode.length === 4){
-      // this.service.servicePass = this.pincode;
+      if(JSON.stringify(this.pincode) === '[4,5,8,9]')
+        this.route.navigateByUrl('/three/gallery')
+      else{
+        this.animation = true;
+        setTimeout(() => {
+          this.animation = false;
+        },500)
+        this.pincode = [];
+      }
     }
-
   }
-
+   
   public onZero(){
     this.pincode.push(0);
   }

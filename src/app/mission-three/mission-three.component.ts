@@ -21,12 +21,12 @@ export class MissionThreeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.sheet = true;
-    this.tutorial = true;
-    setTimeout(() => {
-      this.sheet = false;
-      this.tutorial = false;
-    },5000)
+    // this.sheet = true;
+    // this.tutorial = true;
+    // setTimeout(() => {
+    //   this.sheet = false;
+    //   this.tutorial = false;
+    // },5000)
   }
 
   public prop() {
@@ -45,10 +45,13 @@ export class MissionThreeComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/three/home' && this.route.url != '/three/message')
+    if (this.route.url != '/three/home' && this.route.url != '/three/message' && this.route.url != '/three/gallery')
       this.location.back();
 
     if (this.route.url === '/three/message')
+      this.route.navigateByUrl('/three/home')
+
+    if (this.route.url === '/three/gallery')
       this.route.navigateByUrl('/three/home')
   }
 
