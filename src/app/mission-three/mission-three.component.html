@@ -4,11 +4,11 @@
     <div id="sidebar" class="d-flex flex-column bg-primary justify-content-between py-5 px-4">
         <div class="text-center text-dark overflow-auto">
             <h3> Think You got it? </h3>
-            <p> Type the phone owner's address below, and we will check it for you. </p>
+            <p> Where is the band playing? Type the answer here and we'll check it for you. </p>
             <form [formGroup]="answerGroup" class="my-4 d-flex flex-column text-center">
-                <input type="text" class="form-control mb-2" placeholder="Street name and number" formControlName='ans'>
+                <input type="text" class="form-control mb-2" placeholder="The band is playing at..." formControlName='ans'>
                 <span class="text-danger" [ngClass]="!demo && getControls['ans'].valid && getControls['ans'].touched  ? 'visible' : 'invisible'"> Wrong Answer </span>
-                <button class="btn btn-success mt-3" type="submit" (click)="onCheck()"> Check Answer </button>
+                <button class="btn btn-success mt-3" [disabled]="!answerGroup.valid" type="submit" (click)="onCheck()"> Check Answer </button>
             </form>
         </div>
         <button class="btn btn-danger w-100" (click)="onLeave()"> Leave Mission </button>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="mobile-toggle px-2 d-flex text-white justify-content-around align-items-center">
                     <i class='bx bx-left-arrow-alt fs-5 cursor' (click)="onBack()"></i>
-                    <i class='bx bx-square-rounded fs-5 cursor' routerLink="/one/home"></i>
+                    <i class='bx bx-square-rounded fs-5 cursor' routerLink="/three/home"></i>
                     <label for="toggle"><i class='bx bx-transfer-alt fs-5 cursor'></i></label>
                 </div>
             </div>
@@ -44,7 +44,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white glow">
                 <div class="modal-body text-center d-flex flex-column py-5 fs-4">
-                    <img src="../../assets/images/mission-one/Congratulation.gif"
+                    <img src="../../assets/images/mission-one/congratulations.gif"
                         style="max-width: 150px; margin: auto;" alt="">
                     <span class="mt-4">Congratulation, you accomplished the mission</span>
                 </div>

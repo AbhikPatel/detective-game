@@ -1,0 +1,12 @@
+<div class="h-100 position-relative">
+    <div class="sheet position-absolute" *ngIf="open">
+        <i class="bx bx-x back" style="font-size: 3rem;" (click)="onCross()"></i>
+    </div>
+    <h2 class="text-center py-4"> Images </h2>
+    <div class="row mx-3 g-1">
+        <div class="col-4" *ngFor="let m of images, let i=index">
+            <img src="{{m.data}}" class="gallery-img w-100 cursor" alt="image" (click)="onclick(i)"
+                [ngClass]="(num === i && open === true) ? 'select' : ''">
+        </div>
+    </div>
+</div>

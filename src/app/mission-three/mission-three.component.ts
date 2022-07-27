@@ -4,10 +4,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-mission-one',
-  templateUrl: './mission-one.component.html'
+  selector: 'app-mission-three',
+  templateUrl: './mission-three.component.html'
 })
-export class MissionOneComponent implements OnInit {
+export class MissionThreeComponent implements OnInit {
 
   public now: Date = new Date();
   public demo: boolean = false;
@@ -45,11 +45,11 @@ export class MissionOneComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/one/home' && this.route.url != '/one/message')
+    if (this.route.url != '/three/home' && this.route.url != '/three/message')
       this.location.back();
 
-    if (this.route.url === '/one/message')
-      this.route.navigateByUrl('/one/home')
+    if (this.route.url === '/three/message')
+      this.route.navigateByUrl('/three/home')
   }
 
   public get getControls() {
@@ -64,7 +64,7 @@ export class MissionOneComponent implements OnInit {
       answer[i] = answer[i].charAt(0).toUpperCase() + answer[i].substr(1);
     }
 
-    if (answer.toString() === 'Park,St,30') {
+    if (answer.toString() === 'National,Stadium') {
       this.demo = true;
       this.sheet = true;
       setTimeout(() => {
@@ -79,4 +79,5 @@ export class MissionOneComponent implements OnInit {
     this.sheet = false;
     this.leave = false;
   }
+
 }

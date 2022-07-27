@@ -44,9 +44,25 @@ export class LandingPageComponent implements OnInit {
       ],
       route: "/two"
     },
+    {
+      heading: "#3 Meet Cute",
+      image: "../../assets/images/landing-page/mission-3.jpg",
+      content: [
+        {
+          message: "Your friend Mohit is in a total slump after getting dumped, but you think they'd hit it off with your classmte Riya. When you overhear Riya say she's seeing her favorite and after class, you decide to arrange a meet-cute."
+        },
+        {
+          message: "Unfortunately, Riya rushes out of class before you ask her. And worse, she forget her notebook and cellphone. You're positive you can locate the concert if you open Mara's phone. Then, Mohit can return it to her tonight."
+        },
+        {
+          message: "See if you can find where the band is playing."
+        },
+      ],
+      route: "/three"
+    },
   ]
 
-  public scrollToElement($element:any): void {
-    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  public scrollToElement($element: any): void {
+    $element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
 }
