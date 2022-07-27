@@ -4,14 +4,14 @@
     <div id="sidebar" class="d-flex flex-column bg-primary justify-content-between py-5 px-3 px-md-4 overflow-hidden">
         <div class="text-center text-dark overflow-auto flex-grow-1">
             <h3> Think You got it? </h3>
-            <p> Type the phone owner's address below, and we will check it for you. </p>
+            <p> Her parents are worried. Any lead will help </p>
             <form [formGroup]="answerGroup" class="my-4 d-flex flex-column text-center">
                 <input type="text" class="form-control mb-2" placeholder="Michelle's current Location"
                     formControlName='ans'>
                 <span class="text-danger"
                     [ngClass]="!demo && getControls['ans'].valid && getControls['ans'].touched  ? 'visible' : 'invisible'">
                     Wrong Answer </span>
-                <button class="btn btn-success mt-3" type="submit" (click)="onCheck()"> Check Answer </button>
+                <button class="btn btn-success mt-3" type="submit" [disabled]="!answerGroup.valid"(click)="onCheck()"> Check Answer </button>
             </form>
         </div>
         <button class="btn btn-danger w-100" (click)="onLeave()"> Leave Mission </button>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="mobile-toggle px-2 d-flex text-white justify-content-around align-items-center">
                     <i class='bx bx-left-arrow-alt fs-5 cursor' (click)="onBack()"></i>
-                    <i class='bx bx-square-rounded fs-5 cursor' routerLink="/one/home"></i>
+                    <i class='bx bx-square-rounded fs-5 cursor' routerLink="/two/home"></i>
                     <label for="toggle"><i class='bx bx-transfer-alt cursor'></i></label>
                 </div>
             </div>

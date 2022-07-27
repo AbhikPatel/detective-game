@@ -1,0 +1,33 @@
+<div class="h-100 d-flex justify-content-center align-items-center px-3">
+    <div class="py-5 px-2">
+        <h5 class="text-center"> App Photos is password protected </h5>
+        <div class="d-flex justify-content-around align-items-center my-5 px-5" [ngClass]="animation === true ? 'password' : ''">  
+            <span> <i class="bx fs-4 mx-2" [ngClass]=" pincode[i] != null ? 'bx-radio-circle-marked' : 'bx-radio-circle' "
+                    *ngFor="let m of pin, let i=index"></i> </span>
+        </div>
+        <div class="row px-4">
+            <div class="col-4 d-flex justify-content-center" *ngFor="let num of number, let i = index">
+                <div class="pin py-3">
+                    <span class="pin-number fs-3 cursor rounded-circle d-flex justify-content-center align-items-center"
+                        (click)="onPin(i+1)">
+                        {{num}} </span>
+                </div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4 d-flex justify-content-center">
+                <div class="pin py-3">
+                    <span
+                    class="pin-number fs-3 cursor rounded-circle d-flex justify-content-center align-items-center" (click)="onZero()">
+                    0 </span>
+                </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                <div class="pin py-3">
+                    <span
+                        class="pin-number fs-3 cursor rounded-circle d-flex justify-content-center align-items-center" (click)="onBack()">
+                        <i class="bx bx-arrow-back"></i> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
