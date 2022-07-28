@@ -12,7 +12,9 @@ import { DivyaChatFourComponent } from './divya-chat-four/divya-chat-four.compon
 import { VishalChatFourComponent } from './vishal-chat-four/vishal-chat-four.component';
 import { JennyChatFourComponent } from './jenny-chat-four/jenny-chat-four.component';
 import { RadhikaChatFourComponent } from './radhika-chat-four/radhika-chat-four.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MissionFourService } from './mission-four.service';
+import { HomeFootageComponent } from './home-footage/home-footage.component';
 
 
 @NgModule({
@@ -26,12 +28,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     DivyaChatFourComponent,
     VishalChatFourComponent,
     JennyChatFourComponent,
-    RadhikaChatFourComponent
+    RadhikaChatFourComponent,
+    HomeFootageComponent
   ],
   imports: [
     CommonModule,
     MissionFourRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
+  ],
+  providers:[
+    MissionFourService
   ]
 })
 export class MissionFourModule { }

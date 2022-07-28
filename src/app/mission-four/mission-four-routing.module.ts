@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DivyaChatFourComponent } from './divya-chat-four/divya-chat-four.component';
+import { HomeFootageComponent } from './home-footage/home-footage.component';
 import { HomePageFourComponent } from './home-page-four/home-page-four.component';
 import { JennyChatFourComponent } from './jenny-chat-four/jenny-chat-four.component';
 import { LocalNewsFourComponent } from './local-news-four/local-news-four.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path:'jenny-chat', component:JennyChatFourComponent},
       { path:'radhika-chat', component:RadhikaChatFourComponent},
       { path:'news', component:LocalNewsFourComponent},
+      { path:'home-footage', component:HomeFootageComponent},
     ]
   }
 ];
