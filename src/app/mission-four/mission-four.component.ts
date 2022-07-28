@@ -4,10 +4,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-mission-one',
-  templateUrl: './mission-one.component.html'
+  selector: 'app-mission-four',
+  templateUrl: './mission-four.component.html'
 })
-export class MissionOneComponent implements OnInit {
+export class MissionFourComponent implements OnInit {
 
   public now: Date = new Date();
   public demo: boolean = false;
@@ -21,12 +21,12 @@ export class MissionOneComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.sheet = true;
-    this.tutorial = true;
-    setTimeout(() => {
-      this.sheet = false;
-      this.tutorial = false;
-    },3000)
+    // this.sheet = true;
+    // this.tutorial = true;
+    // setTimeout(() => {
+    //   this.sheet = false;
+    //   this.tutorial = false;
+    // },3000)
   }
 
   public prop() {
@@ -45,11 +45,11 @@ export class MissionOneComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/one/home' && this.route.url != '/one/message')
+    if (this.route.url != '/four/home' && this.route.url != '/four/message')
       this.location.back();
 
-    if (this.route.url === '/one/message')
-      this.route.navigateByUrl('/one/home')
+    if (this.route.url === '/four/message')
+      this.route.navigateByUrl('/four/home')
   }
 
   public get getControls() {
@@ -64,7 +64,7 @@ export class MissionOneComponent implements OnInit {
       answer[i] = answer[i].charAt(0).toUpperCase() + answer[i].substr(1);
     }
 
-    if (answer.toString() === 'Park,St,30') {
+    if (answer.toString() === 'National,Stadium') {
       this.demo = true;
       this.sheet = true;
       setTimeout(() => {
@@ -79,4 +79,5 @@ export class MissionOneComponent implements OnInit {
     this.sheet = false;
     this.leave = false;
   }
+
 }

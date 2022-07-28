@@ -26,7 +26,7 @@ export class MissionTwoComponent implements OnInit {
     setTimeout(() => {
       this.sheet = false;
       this.tutorial = false;
-    }, 5000)
+    }, 3000)
   }
 
   public prop() {

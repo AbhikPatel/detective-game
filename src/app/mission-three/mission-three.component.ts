@@ -21,12 +21,12 @@ export class MissionThreeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.sheet = true;
-    // this.tutorial = true;
-    // setTimeout(() => {
-    //   this.sheet = false;
-    //   this.tutorial = false;
-    // },5000)
+    this.sheet = true;
+    this.tutorial = true;
+    setTimeout(() => {
+      this.sheet = false;
+      this.tutorial = false;
+    },3000)
   }
 
   public prop() {

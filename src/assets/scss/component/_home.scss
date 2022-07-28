@@ -28,6 +28,10 @@
     background-image: url('../../images/mission-three/wallpaper.jpg');
 }
 
+.four{
+    background-image: url('../../images/mission-four/wallpaper.jpg');
+}
+
 @each $clr,$clr-val in $mission-two{
     .icon-#{$clr}{
         background-color: $clr-val;
@@ -36,6 +40,12 @@
 
 @each $clr,$clr-val in $mission-three{
     .three-#{$clr}{
+        background-color: $clr-val;
+    }
+}
+
+@each $clr,$clr-val in $mission-four{
+    .four-#{$clr}{
         background-color: $clr-val;
     }
 }

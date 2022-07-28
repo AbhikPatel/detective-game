@@ -4,7 +4,7 @@
     <div id="sidebar" class="d-flex flex-column bg-primary justify-content-between py-5 px-4">
         <div class="text-center text-dark overflow-auto">
             <h3> Think You got it? </h3>
-            <p> Type the phone owner's address below, and we will check it for you. </p>
+            <p> What's the phone owner's address? </p>
             <form [formGroup]="answerGroup" class="my-4 d-flex flex-column text-center">
                 <input type="text" class="form-control mb-2" placeholder="Street name and number" formControlName='ans'>
                 <span class="text-danger" [ngClass]="!demo && getControls['ans'].valid && getControls['ans'].touched  ? 'visible' : 'invisible'"> Wrong Answer </span>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="mobile-toggle px-2 d-flex text-white justify-content-around align-items-center">
                     <i class='bx bx-left-arrow-alt fs-5 cursor' (click)="onBack()"></i>
-                    <i class='bx bx-square-rounded fs-5 cursor' routerLink="/one/home"></i>
+                    <i class='bx bx-square-rounded fs-5 cursor' routerLink="/three/home"></i>
                     <label for="toggle"><i class='bx bx-transfer-alt fs-5 cursor'></i></label>
                 </div>
             </div>
