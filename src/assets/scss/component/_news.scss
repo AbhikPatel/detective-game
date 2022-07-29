@@ -1,0 +1,15 @@
+.news{
+    color: #47007a;
+    &-img{
+        border-radius: 10px;
+    }
+
+    &-btn{
+        font-size: $font-size-sm;
+        background-color: #47007a;
+    }
+    
+    p{
+        font-size: $font-size-sm;
+    }
+}

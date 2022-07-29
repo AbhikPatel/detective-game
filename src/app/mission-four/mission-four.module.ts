@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MissionFourService } from './mission-four.service';
 import { HomeFootageComponent } from './home-footage/home-footage.component';
 import { PizzaTrackerFourComponent } from './pizza-tracker-four/pizza-tracker-four.component';
+import { NewsSettlarComponent } from './news-settlar/news-settlar.component';
+import { NewsDroneComponent } from './news-drone/news-drone.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { PizzaTrackerFourComponent } from './pizza-tracker-four/pizza-tracker-fo
     JennyChatFourComponent,
     RadhikaChatFourComponent,
     HomeFootageComponent,
-    PizzaTrackerFourComponent
+    PizzaTrackerFourComponent,
+    NewsSettlarComponent,
+    NewsDroneComponent
   ],
   imports: [
     CommonModule,

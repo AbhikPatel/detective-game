@@ -7,6 +7,8 @@ import { JennyChatFourComponent } from './jenny-chat-four/jenny-chat-four.compon
 import { LocalNewsFourComponent } from './local-news-four/local-news-four.component';
 import { MessageChatFourComponent } from './message-chat-four/message-chat-four.component';
 import { MissionFourComponent } from './mission-four.component';
+import { NewsDroneComponent } from './news-drone/news-drone.component';
+import { NewsSettlarComponent } from './news-settlar/news-settlar.component';
 import { PizzaFourComponent } from './pizza-four/pizza-four.component';
 import { PizzaTrackerFourComponent } from './pizza-tracker-four/pizza-tracker-four.component';
 import { RadhikaChatFourComponent } from './radhika-chat-four/radhika-chat-four.component';
@@ -28,6 +30,8 @@ const routes: Routes = [
       { path:'news', component:LocalNewsFourComponent},
       { path:'home-footage', component:HomeFootageComponent},
       { path:'pizza-tracker', component:PizzaTrackerFourComponent},
+      { path:'news-drone', component:NewsDroneComponent},
+      { path:'news-settlar', component:NewsSettlarComponent},
     ]
   }
 ];

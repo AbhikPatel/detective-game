@@ -16,6 +16,7 @@ export class MissionFourComponent implements OnInit {
   public sheet: boolean = false;
   public tutorial: boolean = false;
   public notification: boolean = false;
+  public once: boolean = true;
   public answerGroup!: FormGroup;
 
   constructor(private route: Router, private location: Location, private fb: FormBuilder, private service: MissionFourService) {
@@ -23,12 +24,12 @@ export class MissionFourComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.sheet = true;
-    // this.tutorial = true;
-    // setTimeout(() => {
-    //   this.sheet = false;
-    //   this.tutorial = false;
-    // },3000)
+    this.sheet = true;
+    this.tutorial = true;
+    setTimeout(() => {
+      this.sheet = false;
+      this.tutorial = false;
+    },3000)
   }
 
   public prop() {
@@ -53,8 +54,15 @@ export class MissionFourComponent implements OnInit {
     if (this.route.url === '/four/message')
       this.route.navigateByUrl('/four/home')
 
-    if (this.route.url === '/four/pizza-tracker' && this.service.connectionFailed === true)
+    if (this.route.url === '/four/pizza-tracker' && this.service.connectionFailed === true) {
       this.route.navigateByUrl('/four/home')
+      if (this.once === true) {
+        setTimeout(() => {
+          this.notification = true;
+        }, 5000)
+        this.once = false;
+      }
+    }
   }
 
   public get getControls() {
@@ -69,7 +77,7 @@ export class MissionFourComponent implements OnInit {
       answer[i] = answer[i].charAt(0).toUpperCase() + answer[i].substr(1);
     }
 
-    if (answer.toString() === 'National,Stadium') {
+    if (answer.toString() === 'South,Robb,3620') {
       this.demo = true;
       this.sheet = true;
       setTimeout(() => {
@@ -89,14 +97,21 @@ export class MissionFourComponent implements OnInit {
     if (this.route.url != '/four/pizza-tracker') {
       this.route.navigateByUrl('/four/home')
     } else {
-      if (this.service.connectionFailed === true)
+      if (this.service.connectionFailed === true) {
         this.route.navigateByUrl('/four/home')
+        if (this.once === true) {
+          setTimeout(() => {
+            this.notification = true;
+          }, 5000)
+          this.once = false;
+        }
+      }
     }
   }
 
-  public onNotification(){
+  public onNotification() {
     this.route.navigateByUrl('/four/news');
     this.notification = false;
+    this.service.new.next(true);
   }
-
 }
