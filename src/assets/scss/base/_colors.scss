@@ -1,15 +1,22 @@
 // Theme Color 
-$primary                                : #22beef;
+$primary : #22beef;
 
-$mission-two:(
+$mission-two: (
     "message":#4267B2,
     "gallery":#ff0088,
     "notes":#ffff00,
     "browser":#9500ff,
 );
 
-$mission-three:(
+$mission-three: (
     "phone":#10e10d,
     "message":#4267B2,
     "gallery":#ff0088,
-)
+);
+
+$mission-four: (
+    "message":#4267B2,
+    "smart":#fff700,
+    "pizza":#ff4000,
+    "news":#9500ff,
+);

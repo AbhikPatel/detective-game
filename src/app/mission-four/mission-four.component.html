@@ -4,7 +4,7 @@
     <div id="sidebar" class="d-flex flex-column bg-primary justify-content-between py-5 px-4">
         <div class="text-center text-dark overflow-auto">
             <h3> Think You got it? </h3>
-            <p> Type the phone owner's address below, and we will check it for you. </p>
+            <p> What's the phone owner's address? </p>
             <form [formGroup]="answerGroup" class="my-4 d-flex flex-column text-center">
                 <input type="text" class="form-control mb-2" placeholder="Street name and number" formControlName='ans'>
                 <span class="text-danger" [ngClass]="!demo && getControls['ans'].valid && getControls['ans'].touched  ? 'visible' : 'invisible'"> Wrong Answer </span>
@@ -26,12 +26,19 @@
                         <i class='bx bxs-battery fs-5 ms-1'></i>
                     </div>
                 </div>
-                <div class="flex-grow-1 overflow-auto">
+                <div class="flex-grow-1 overflow-auto position-relative">
+                    <div class="notification position-absolute p-3 w-100 cursor" (click)="onNotification()" [ngClass]="notification === false ? 'notification-off' : 'notification-on'">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5> LOCAL NEWS</h5>
+                            <p> {{now.getHours()}}:{{now.getMinutes()}} </p>
+                        </div>
+                        <span class="mt-2"> Pizza-Carrying Drone in Lakewood </span>
+                    </div>
                     <router-outlet></router-outlet>
                 </div>
                 <div class="mobile-toggle px-2 d-flex text-white justify-content-around align-items-center">
                     <i class='bx bx-left-arrow-alt fs-5 cursor' (click)="onBack()"></i>
-                    <i class='bx bx-square-rounded fs-5 cursor' routerLink="/one/home"></i>
+                    <i class='bx bx-square-rounded fs-5 cursor' (click)="onHome()"></i>
                     <label for="toggle"><i class='bx bx-transfer-alt fs-5 cursor'></i></label>
                 </div>
             </div>

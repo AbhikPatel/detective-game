@@ -60,6 +60,19 @@ export class LandingPageComponent implements OnInit {
       ],
       route: "/three"
     },
+    // {
+    //   heading: "#4 Another Phone Return",
+    //   image: "../../assets/images/landing-page/mission-4.jpg",
+    //   content: [
+    //     {
+    //       message: "Your friend frank finds a lost phone outside their house, he calls on you to help. The device appears to have no information to identify the owner, but Frank trusts you can do it."
+    //     },
+    //     {
+    //       message: "Use your detective skills to locate the owner's address."
+    //     },
+    //   ],
+    //   route: "/four"
+    // },
   ]
 
   public scrollToElement($element: any): void {

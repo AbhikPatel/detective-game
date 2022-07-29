@@ -2,6 +2,12 @@
     flex: 0 0 $sidebar-width;
     transition: 0.6s all;
 
+    input {
+        @media(max-width: $tablet-view){
+            font-size: $font-size-sm;
+        }
+    }
+
     @media (max-width: $tablet-view){
         position: absolute;
         z-index: 9;

@@ -28,6 +28,10 @@
     background-image: url('../../images/mission-three/wallpaper.jpg');
 }
 
+.four{
+    background-image: url('../../images/mission-four/wallpaper.jpg');
+}
+
 @each $clr,$clr-val in $mission-two{
     .icon-#{$clr}{
         background-color: $clr-val;
@@ -40,10 +44,31 @@
     }
 }
 
+@each $clr,$clr-val in $mission-four{
+    .four-#{$clr}{
+        background-color: $clr-val;
+    }
+}
+
 .modal-body{
     font-size: 1.2rem;
 
     @media (max-width: $tablet-view){
         font-size: $font-size-sm;
     }
+}
+
+.notification{
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+    backdrop-filter: blur(8px);
+    transition: $transition;
+    border-radius: 30px;
+}
+
+.notification-on{
+    top: 0;
+}
+
+.notification-off{
+    top: -100px;
 }
