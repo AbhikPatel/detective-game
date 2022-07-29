@@ -9,7 +9,6 @@ import { MissionFourService } from '../mission-four.service';
 export class PizzaFourComponent implements OnInit {
 
   public appLock: boolean = false;
-  // public onOrder:boolean = false;
 
   public pincode: any = [];
   public animation = false;
@@ -32,7 +31,7 @@ export class PizzaFourComponent implements OnInit {
     this.pincode.push(id);
     
     if (this.pincode.length === 4) {
-      if (JSON.stringify(this.pincode) === '[2,8,0,9]') {
+      if (JSON.stringify(this.pincode) === '[3,2,2,5]') {
         this.service.pizzaLock = false;
         this.appLock = false;
       }

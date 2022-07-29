@@ -40,10 +40,9 @@ export class JennyChatFourComponent implements OnInit {
       name:'sender',
       message:"Did you call up that clingy real estate agent?"
     },
-    {
-      name:'user',
-      message:"Yeah.. Helped me posted an ad on Settlar.com and it brought everything back up."
-    },
+  ];
+
+  chat2:any[] = [
     {
       name:'sender',
       message:"I'm so sorry I know how attached you are to that place. But this mansion slash estate slash paradise is going to be wayy better! No bad memories there"
@@ -69,5 +68,4 @@ export class JennyChatFourComponent implements OnInit {
       message:"You're the best friend ever!"
     },
   ]
-
 }

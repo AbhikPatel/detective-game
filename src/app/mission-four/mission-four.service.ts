@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class MissionFourService {
@@ -7,5 +8,10 @@ export class MissionFourService {
   public pizzaLock:boolean = true;
   public Lights:boolean = false;
   public connectionFailed:boolean = false;
-  constructor() { }
+  public visited:boolean = false;
+  public new:BehaviorSubject<boolean>;
+
+  constructor() { 
+    this.new = new BehaviorSubject<boolean>(false);
+  }
 }
