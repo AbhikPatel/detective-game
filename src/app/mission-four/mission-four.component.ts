@@ -2,6 +2,7 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MissionFourService } from './mission-four.service';
 
 @Component({
   selector: 'app-mission-four',
@@ -14,9 +15,10 @@ export class MissionFourComponent implements OnInit {
   public leave: boolean = false;
   public sheet: boolean = false;
   public tutorial: boolean = false;
+  public notification: boolean = false;
   public answerGroup!: FormGroup;
 
-  constructor(private route: Router, private location: Location, private fb: FormBuilder) {
+  constructor(private route: Router, private location: Location, private fb: FormBuilder, private service: MissionFourService) {
     this.prop();
   }
 
@@ -45,10 +47,13 @@ export class MissionFourComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/four/home' && this.route.url != '/four/message')
+    if (this.route.url != '/four/home' && this.route.url != '/four/message' && this.route.url != '/four/pizza-tracker')
       this.location.back();
 
     if (this.route.url === '/four/message')
+      this.route.navigateByUrl('/four/home')
+
+    if (this.route.url === '/four/pizza-tracker' && this.service.connectionFailed === true)
       this.route.navigateByUrl('/four/home')
   }
 
@@ -75,9 +80,23 @@ export class MissionFourComponent implements OnInit {
     }
   }
 
-  public onNo(){
+  public onNo() {
     this.sheet = false;
     this.leave = false;
+  }
+
+  public onHome() {
+    if (this.route.url != '/four/pizza-tracker') {
+      this.route.navigateByUrl('/four/home')
+    } else {
+      if (this.service.connectionFailed === true)
+        this.route.navigateByUrl('/four/home')
+    }
+  }
+
+  public onNotification(){
+    this.route.navigateByUrl('/four/news');
+    this.notification = false;
   }
 
 }

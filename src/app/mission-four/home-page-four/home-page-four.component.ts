@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MissionFourService } from '../mission-four.service';
 
 @Component({
   selector: 'app-home-page-four',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageFourComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:MissionFourService) { }
 
   ngOnInit(): void {
+    if(this.service.pizzaLock === false)
+      this.application[2].route = '/four/pizza-tracker'
   }
 
   public application: any[] = [

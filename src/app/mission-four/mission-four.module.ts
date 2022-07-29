@@ -15,6 +15,7 @@ import { RadhikaChatFourComponent } from './radhika-chat-four/radhika-chat-four.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MissionFourService } from './mission-four.service';
 import { HomeFootageComponent } from './home-footage/home-footage.component';
+import { PizzaTrackerFourComponent } from './pizza-tracker-four/pizza-tracker-four.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HomeFootageComponent } from './home-footage/home-footage.component';
     VishalChatFourComponent,
     JennyChatFourComponent,
     RadhikaChatFourComponent,
-    HomeFootageComponent
+    HomeFootageComponent,
+    PizzaTrackerFourComponent
   ],
   imports: [
     CommonModule,

@@ -57,3 +57,18 @@
         font-size: $font-size-sm;
     }
 }
+
+.notification{
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+    backdrop-filter: blur(8px);
+    transition: $transition;
+    border-radius: 30px;
+}
+
+.notification-on{
+    top: 0;
+}
+
+.notification-off{
+    top: -100px;
+}

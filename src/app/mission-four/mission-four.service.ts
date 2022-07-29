@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
 export class MissionFourService {
 
   public smartAuth:boolean = false;
+  public pizzaLock:boolean = true;
   public Lights:boolean = false;
+  public connectionFailed:boolean = false;
   constructor() { }
 }

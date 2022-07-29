@@ -1,0 +1,11 @@
+<div class="h-100 d-flex flex-column justify-content-center align-items-center text-center px-4" style="background-color: #ff4000; color: #ffc400;" *ngIf="connectionFailed === false">
+    <h5> Hurray! Your Pizza is on the Way </h5>
+    <p style="font-size: 0.8rem;"> Your hot pizza just got out of the oven (yes we're that fast), and our magical drone is on its way to your place. </p>
+    <img src="../../../assets/images/mission-four/18-location-pin-flat.gif" style="max-width: 120px;" alt="">
+    <span class="mt-5"> Time to destination : {{deliveryTime}} seconds </span>
+</div>
+<div class="h-100 d-flex flex-column justify-content-center align-items-center text-center px-4" style="background-color: #ff4000; color: #ffc400;" *ngIf="connectionFailed === true">
+    <h5> Pizza Tracker </h5>
+    <p style="font-size: 0.8rem;"> Oh no! We lost the communication with the drone!! Please wait while we figure out what happened. </p>
+    <img src="../../../assets/images/mission-four/1140-error-flat.gif" style="max-width: 120px;" alt="">
+</div>
