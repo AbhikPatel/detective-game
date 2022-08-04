@@ -1,0 +1,237 @@
+<div class="h-100">
+    <div class="calendar" *ngIf="month === 1">
+        <div class="calendar-heading d-flex justify-content-between align-items-center px-4 py-2">
+            <i class='bx bx-chevrons-left fs-4' (click)="onPrev()"></i>
+            <span class="fw-bolder"> June 2022 </span>
+            <i class='bx bx-chevrons-right fs-4' (click)="onNext()"></i>
+        </div>
+        <div class="d-flex justify-content-around text-muted" style="font-size: 0.8rem;">
+            <span> M </span>
+            <span> T </span>
+            <span> W </span>
+            <span> T </span>
+            <span> F </span>
+            <span> S </span>
+            <span> S </span>
+        </div>
+        <div class="calendar-sheet">
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span>  </span>
+                <span>  </span>
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
+                <span> 4 </span>
+                <span> 5 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+                <span> 8 </span>
+                <span> 9 </span>
+                <span> 10 </span>
+                <span> 11 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 12 </span>
+                <span> 13 </span>
+                <span class="position-relative" (click)="onDate(1)" [ngClass]="{'events-message' : event === 1}"> 14
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+                <span class="position-relative" (click)="onDate(2)" [ngClass]="{'events-message' : event === 2}"> 15 
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+                <span> 16</span>
+                <span> 17 </span>
+                <span> 18 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 19 </span>
+                <span> 20 </span>
+                <span> 21 </span>
+                <span> 22 </span>
+                <span> 23 </span>
+                <span> 24 </span>
+                <span> 25 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4" style="font-size: 0.8rem;">
+                <span> 26 </span>
+                <span> 27 </span>
+                <span> 28 </span>
+                <span> 29 </span>
+                <span> 30 </span>
+                <span>  </span>
+                <span> </span>
+            </div>
+        </div>
+    </div>
+    <div class="calendar" *ngIf="month === 2">
+        <div class="calendar-heading d-flex justify-content-between align-items-center px-4 py-2">
+            <i class='bx bx-chevrons-left fs-4' (click)="onPrev()"></i>
+            <span class="fw-bolder"> July 2022 </span>
+            <i class='bx bx-chevrons-right fs-4' (click)="onNext()"></i>
+        </div>
+        <div class="d-flex justify-content-around text-muted" style="font-size: 0.8rem;">
+            <span> M </span>
+            <span> T </span>
+            <span> W </span>
+            <span> T </span>
+            <span> F </span>
+            <span> S </span>
+            <span> S </span>
+        </div>
+        <div class="calendar-sheet">
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span>  </span>
+                <span>  </span>
+                <span>  </span>
+                <span>  </span>
+                <span class="position-relative" (click)="onDate(3)" [ngClass]="{'events-message' : event === 3}"> 1
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+                <span> 2 </span>
+                <span> 3 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 4 </span>
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+                <span> 8 </span>
+                <span> 9 </span>
+                <span class="position-relative" (click)="onDate(4)" [ngClass]="{'events-message' : event === 4}"> 10
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 11 </span>
+                <span> 12 </span>
+                <span> 13 </span>
+                <span> 14 </span>
+                <span> 15 </span>
+                <span> 16 </span>
+                <span> 17 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 18 </span>
+                <span class="position-relative" (click)="onDate(5)" [ngClass]="{'events-message' : event === 5}"> 19
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+                <span> 20 </span>
+                <span> 21 </span>
+                <span> 22 </span>
+                <span> 23 </span>
+                <span> 24 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span class="position-relative" (click)="onDate(6)" [ngClass]="{'events-message' : event === 6}"> 25
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+                <span class="position-relative" (click)="onDate(7)" [ngClass]="{'events-message' : event === 7}"> 26
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+                <span> 27 </span>
+                <span class="position-relative" (click)="onDate(8)" [ngClass]="{'events-message' : event === 8}"> 28
+                    <div class="position-absolute fs-4" style="bottom: -20px;">
+                        &bull;
+                    </div>
+                </span>
+                <span> 29 </span>
+                <span> 30 </span>
+                <span> 31 </span>
+            </div>
+        </div>
+    </div>
+    <div class="calendar" *ngIf="month === 3">
+        <div class="calendar-heading d-flex justify-content-between align-items-center px-4 py-2">
+            <i class='bx bx-chevrons-left fs-4' (click)="onPrev()"></i>
+            <span class="fw-bolder"> August 2022 </span>
+            <i class='bx bx-chevrons-right fs-4' (click)="onNext()"></i>
+        </div>
+        <div class="d-flex justify-content-around text-muted" style="font-size: 0.8rem;">
+            <span> M </span>
+            <span> T </span>
+            <span> W </span>
+            <span> T </span>
+            <span> F </span>
+            <span> S </span>
+            <span> S </span>
+        </div>
+        <div class="calendar-sheet">
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
+                <span> 4 </span>
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 8 </span>
+                <span> 9 </span>
+                <span> 10 </span>
+                <span> 11 </span>
+                <span> 12 </span>
+                <span> 13 </span>
+                <span> 14 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 15 </span>
+                <span> 16 </span>
+                <span> 17 </span>
+                <span> 18 </span>
+                <span> 19</span>
+                <span> 20 </span>
+                <span> 21 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4 border-bottom" style="font-size: 0.8rem;">
+                <span> 22 </span>
+                <span> 23 </span>
+                <span> 24 </span>
+                <span> 25 </span>
+                <span> 26 </span>
+                <span> 27 </span>
+                <span> 28 </span>
+            </div>
+            <div class="d-flex justify-content-around fw-bold pt-2 pb-4" style="font-size: 0.8rem;">
+                <span> 29 </span>
+                <span> 30 </span>
+                <span> 31 </span>
+                <span>  </span>
+                <span>  </span>
+                <span>  </span>
+                <span>  </span>
+            </div>
+        </div>
+    </div>
+    <div class="events">
+        <h5 class="px-3 py-1 m-0 calendar-heading"> Events </h5>
+        <div style="background-color: #b2b2b2;" class="h-100 p-3">
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 0"> No Events </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 1"> 09:00 AM - Danny's Pet Shop </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 2"> 12:10 AM - Vet appointment for Wilbur</span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 3"> 11:30 AM - Meet Dan </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 4"> 06:00 PM - Meet Holly </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 5"> 02:00 PM - Meet Joan </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 6"> 10:17 AM - Notes </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 7"> 10:00 PM - Acqiure Shadownet </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 8"> 12:00 AM - Required: Buy a new hat </span>
+        </div>
+    </div>
+</div>
