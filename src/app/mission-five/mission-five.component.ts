@@ -45,13 +45,16 @@ export class MissionFiveComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/five/home' && this.route.url != '/five/message' && this.route.url != '/five/note')
+    if (this.route.url != '/five/home' && this.route.url != '/five/message' && this.route.url != '/five/notes' && this.route.url != '/five/vault')
       this.location.back();
 
     if (this.route.url === '/five/message')
       this.route.navigateByUrl('/five/home')
 
-    if (this.route.url === '/five/note')
+    if (this.route.url === '/five/notes')
+      this.route.navigateByUrl('/five/vault')
+
+    if (this.route.url === '/five/vault')
       this.route.navigateByUrl('/five/home')
   }
 

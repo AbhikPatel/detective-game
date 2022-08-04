@@ -1,9 +1,9 @@
 <div class="h-100">
     <div class="calendar" *ngIf="month === 1">
         <div class="calendar-heading d-flex justify-content-between align-items-center px-4 py-2">
-            <i class='bx bx-chevrons-left fs-4' (click)="onPrev()"></i>
+            <i class='bx bx-chevrons-left fs-4 cursor' (click)="onPrev()"></i>
             <span class="fw-bolder"> June 2022 </span>
-            <i class='bx bx-chevrons-right fs-4' (click)="onNext()"></i>
+            <i class='bx bx-chevrons-right fs-4 cursor' (click)="onNext()"></i>
         </div>
         <div class="d-flex justify-content-around text-muted" style="font-size: 0.8rem;">
             <span> M </span>
@@ -225,11 +225,11 @@
         <div style="background-color: #b2b2b2;" class="h-100 p-3">
             <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 0"> No Events </span>
             <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 1"> 09:00 AM - Danny's Pet Shop </span>
-            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 2"> 12:10 AM - Vet appointment for Wilbur</span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 2"> 12:10 AM - Vet appointment for Jax</span>
             <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 3"> 11:30 AM - Meet Dan </span>
             <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 4"> 06:00 PM - Meet Holly </span>
             <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 5"> 02:00 PM - Meet Joan </span>
-            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 6"> 10:17 AM - Notes </span>
+            <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 6"> 10:23 AM - Notes </span>
             <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 7"> 10:00 PM - Acqiure Shadownet </span>
             <span class="py-1 px-3 rounded-pill events-message" *ngIf="event === 8"> 12:00 AM - Required: Buy a new hat </span>
         </div>

@@ -60,6 +60,12 @@
     }
 }
 
+@each $clr,$clr-val in $mission-vault{
+    .vault-#{$clr}{
+        background-color: $clr-val;
+    }
+}
+
 .modal-body{
     font-size: 1.2rem;
 

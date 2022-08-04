@@ -1,5 +1,6 @@
 // Theme Color 
-$primary : #22beef;
+$primary                                    : #22beef;
+$danger                                     : #dc3545; 
 
 $mission-two: (
     "message":#4267B2,
@@ -26,4 +27,11 @@ $mission-five: (
     "vault":#00960f,
     "calender":#3900aa,
     "browser":#9500ff,
+);
+
+$mission-vault: (
+    "police":#4267B2,
+    "device":#ff0088,
+    "target":$danger,
+    "notes":#ffff00,
 );

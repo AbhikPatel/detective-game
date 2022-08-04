@@ -22,7 +22,7 @@ export class ChatHqFiveComponent implements OnInit {
     },
     {
       name:'sender',
-      message:"We also synced your calender so you won't miss any important events.",
+      message:"We transferred the vault from your old Nokia to this phone and synced your calendar so you wouldn't miss any essential events. ",
     },
     {
       name:'sender',

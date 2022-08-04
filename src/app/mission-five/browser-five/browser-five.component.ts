@@ -20,8 +20,7 @@ export class BrowserFiveComponent implements OnInit {
     "www.funny.dogs/charlie",
     "how to groom an golden retriever",
     "the glided mermaid",
-    "if you don't control your mind someone else will",
-    "www.wcsp.gov/awards-2020"
+    "if you don't control your mind someone else will"
   ]
 
 }
