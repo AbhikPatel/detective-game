@@ -1,0 +1,84 @@
+<div class="dashboard h-100 d-flex overflow-hidden position-relative">
+    <div class="sheet position-absolute" *ngIf="sheet"></div>
+    <input type="checkbox" class="d-none" id="toggle">
+    <div id="sidebar" class="d-flex flex-column bg-primary justify-content-between py-5 px-4">
+        <div class="text-center text-dark overflow-auto">
+            <h3> Think You got it? </h3>
+            <p> Who is Mr.X's agent? </p>
+            <form [formGroup]="answerGroup" class="my-4 d-flex flex-column text-center">
+                <input type="text" class="form-control mb-2" placeholder="First and Last name" formControlName='ans'>
+                <span class="text-danger" [ngClass]="!demo && getControls['ans'].valid && getControls['ans'].touched  ? 'visible' : 'invisible'"> Wrong Answer </span>
+                <button class="btn btn-success mt-3" [disabled]="!answerGroup.valid" type="submit" (click)="onCheck()"> Check Answer </button>
+            </form>
+        </div>
+        <button class="btn btn-danger w-100" (click)="onLeave()"> Leave Mission </button>
+    </div>
+    <div class="flex-grow-1 py-5 overflow-auto" style="background-color: #313131;">
+        <div class="mobile mx-auto p-3">
+            <div class="mobile-screen d-flex flex-column h-100 overflow-hidden">
+                <div class="mobile-notification px-3 text-white d-flex justify-content-between">
+                    <div class="mt-1">
+                        <p> {{now.getHours()}}:{{now.getMinutes()}} </p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class='bx bx-no-signal fs-5 me-2'></i>
+                        <span> 90% </span>
+                        <i class='bx bxs-battery fs-5 ms-1'></i>
+                    </div>
+                </div>
+                <div class="flex-grow-1 overflow-auto position-relative">
+                    <router-outlet></router-outlet>
+                </div>
+                <div class="mobile-toggle px-2 d-flex text-white justify-content-around align-items-center">
+                    <i class='bx bx-left-arrow-alt fs-5 cursor' (click)="onBack()"></i>
+                    <i class='bx bx-square-rounded fs-5 cursor' (click)="onHome()"></i>
+                    <label for="toggle"><i class='bx bx-transfer-alt fs-5 cursor'></i></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        [ngClass]="demo ? 'd-block' : 'd-none'">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white glow">
+                <div class="modal-body text-center d-flex flex-column py-5">
+                    <img src="../../assets/images/mission-one/Congratulation.gif"
+                        style="max-width: 150px; margin: auto;" alt="">
+                    <span class="mt-4">Congratulation, you accomplished the mission</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" [ngClass]="leave ? 'd-block' : 'd-none'">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white glow py-3 px-2">
+                <div class="modal-body mb-4">
+                    Are you sure you want to leave this mission?
+                </div>
+                <div class="d-flex justify-content-end gap-3 my-3 px-4">
+                    <button type="button" class="btn btn-primary" routerLink="/landing"
+                        data-bs-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-danger" (click)="onNo()">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade pt-5" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" [ngClass]="tutorial ? 'd-block' : 'd-none'">
+        <div class="modal-dialog pt-5">
+            <div class="modal-content bg-dark text-white glow py-3 px-2">
+                <div class="modal-body mb-4">
+                    Note: Using this button (<i class="bx bx bx-transfer-alt"></i>) on the bottom of the device will
+                    toggle the sidebar
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

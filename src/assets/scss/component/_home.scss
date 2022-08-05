@@ -32,6 +32,10 @@
     background-image: url('../../images/mission-four/wallpaper.jpg');
 }
 
+.five{
+    background-image: url('../../images/mission-five/wallpaper.jpg');
+}
+
 @each $clr,$clr-val in $mission-two{
     .icon-#{$clr}{
         background-color: $clr-val;
@@ -46,6 +50,18 @@
 
 @each $clr,$clr-val in $mission-four{
     .four-#{$clr}{
+        background-color: $clr-val;
+    }
+}
+
+@each $clr,$clr-val in $mission-five{
+    .five-#{$clr}{
+        background-color: $clr-val;
+    }
+}
+
+@each $clr,$clr-val in $mission-vault{
+    .vault-#{$clr}{
         background-color: $clr-val;
     }
 }
@@ -71,4 +87,11 @@
 
 .notification-off{
     top: -100px;
+}
+
+.app-lock{
+    background-image: url('../../images/mission-five/lock-wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

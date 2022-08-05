@@ -73,6 +73,25 @@ export class LandingPageComponent implements OnInit {
       ],
       route: "/four"
     },
+    {
+      heading: "#5 Mr. X",
+      image: "../../assets/images/landing-page/mission-5.jpg",
+      content: [
+        {
+          message:"The World-Class Secret Police Organization (WCSP) hired you to locate a world-famous criminal known only as Mr. X."
+        },
+        {
+          message:"WCSP's investigation has led you to an Atlantic Cruise ship where you have evidence that Mr.X is among the guests!"
+        },
+        {
+          message:"As luck would have it, your hunch pays off. The WCSP tech team has triangulated the location of a phone hidden on the ship for Mr.X, and you were able to put your hands on it before Mr. X found it."
+        },
+        {
+          message:"Your mission is to discover what Mr. X is planning and identify their next target!"
+        }
+      ],
+      route: "/five"
+    },
   ]
 
   public scrollToElement($element: any): void {

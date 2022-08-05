@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MissionScreenComponent } from './mission-screen/mission-screen.component';
 
 
@@ -9,7 +10,8 @@ import { MissionScreenComponent } from './mission-screen/mission-screen.componen
     MissionScreenComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule
+  ],
 })
 export class SharedModule { }

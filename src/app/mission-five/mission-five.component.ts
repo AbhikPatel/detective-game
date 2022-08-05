@@ -4,10 +4,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-mission-one',
-  templateUrl: './mission-one.component.html'
+  selector: 'app-mission-five',
+  templateUrl: './mission-five.component.html'
 })
-export class MissionOneComponent implements OnInit {
+export class MissionFiveComponent implements OnInit {
 
   public now: Date = new Date();
   public demo: boolean = false;
@@ -26,7 +26,7 @@ export class MissionOneComponent implements OnInit {
     setTimeout(() => {
       this.sheet = false;
       this.tutorial = false;
-    },3000)
+    }, 3000)
   }
 
   public prop() {
@@ -45,11 +45,17 @@ export class MissionOneComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/one/home' && this.route.url != '/one/message')
+    if (this.route.url != '/five/home' && this.route.url != '/five/message' && this.route.url != '/five/notes' && this.route.url != '/five/vault' && this.route.url != '/five/lock-screen')
       this.location.back();
 
-    if (this.route.url === '/one/message')
-      this.route.navigateByUrl('/one/home')
+    if (this.route.url === '/five/message')
+      this.route.navigateByUrl('/five/home')
+
+    if (this.route.url === '/five/notes')
+      this.route.navigateByUrl('/five/vault')
+
+    if (this.route.url === '/five/vault')
+      this.route.navigateByUrl('/five/home')
   }
 
   public get getControls() {
@@ -64,7 +70,7 @@ export class MissionOneComponent implements OnInit {
       answer[i] = answer[i].charAt(0).toUpperCase() + answer[i].substr(1);
     }
 
-    if (answer.toString() === ('Park,St,30' || '30,Park,St')) {
+    if (answer.toString() === 'Oliver,Merrill') {
       this.demo = true;
       this.sheet = true;
       setTimeout(() => {
@@ -75,8 +81,14 @@ export class MissionOneComponent implements OnInit {
     }
   }
 
-  public onNo(){
+  public onNo() {
     this.sheet = false;
     this.leave = false;
   }
+
+  public onHome(){
+    if(this.route.url != '/five/lock-screen')
+      this.route.navigateByUrl('/five/home')
+  } 
+
 }
