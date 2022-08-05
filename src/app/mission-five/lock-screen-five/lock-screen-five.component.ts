@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MissionFiveService } from '../mission-five.service';
 
 @Component({
   selector: 'app-lock-screen-five',
@@ -28,7 +29,7 @@ export class LockScreenFiveComponent implements OnInit {
 
     if (this.pincode.length === 4) {
       if (JSON.stringify(this.pincode) === '[1,9,5,7]') {
-        this.route.navigateByUrl('/five/home')
+        this.route.navigateByUrl('/five/home');
       }
       else {
         this.animation = true;

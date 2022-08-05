@@ -9,6 +9,7 @@ import { ImagesFiveComponent } from './images-five/images-five.component';
 import { LockScreenFiveComponent } from './lock-screen-five/lock-screen-five.component';
 import { MessageChatFiveComponent } from './message-chat-five/message-chat-five.component';
 import { MissionFiveComponent } from './mission-five.component';
+import { NotesDataFiveComponent } from './notes-data-five/notes-data-five.component';
 import { NotesFiveComponent } from './notes-five/notes-five.component';
 import { PinCodeFiveComponent } from './pin-code-five/pin-code-five.component';
 import { VaultFiveComponent } from './vault-five/vault-five.component';
@@ -31,6 +32,11 @@ const routes: Routes = [
       { path:'device' , component: ImagesFiveComponent},
       { path:'target' , component: ImagesFiveComponent},
       { path:'pdf' , component: ImagesFiveComponent},
+      { path:'shadownet' , component: NotesDataFiveComponent},
+      { path:'jonathan' , component: NotesDataFiveComponent},
+      { path:'untitled' , component: NotesDataFiveComponent},
+      { path:'wcsp' , component: NotesDataFiveComponent},
+      { path:'game' , component: NotesDataFiveComponent},
     ]
   }
 ];

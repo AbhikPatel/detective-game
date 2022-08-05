@@ -21,12 +21,12 @@ export class MissionFiveComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.sheet = true;
-    // this.tutorial = true;
-    // setTimeout(() => {
-    //   this.sheet = false;
-    //   this.tutorial = false;
-    // }, 3000)
+    this.sheet = true;
+    this.tutorial = true;
+    setTimeout(() => {
+      this.sheet = false;
+      this.tutorial = false;
+    }, 3000)
   }
 
   public prop() {
@@ -45,7 +45,7 @@ export class MissionFiveComponent implements OnInit {
   }
 
   public onBack() {
-    if (this.route.url != '/five/home' && this.route.url != '/five/message' && this.route.url != '/five/notes' && this.route.url != '/five/vault')
+    if (this.route.url != '/five/home' && this.route.url != '/five/message' && this.route.url != '/five/notes' && this.route.url != '/five/vault' && this.route.url != '/five/lock-screen')
       this.location.back();
 
     if (this.route.url === '/five/message')
@@ -70,7 +70,7 @@ export class MissionFiveComponent implements OnInit {
       answer[i] = answer[i].charAt(0).toUpperCase() + answer[i].substr(1);
     }
 
-    if (answer.toString() === 'Hotel,Indigo,Berlin') {
+    if (answer.toString() === 'Oliver,Merrill') {
       this.demo = true;
       this.sheet = true;
       setTimeout(() => {
@@ -85,5 +85,10 @@ export class MissionFiveComponent implements OnInit {
     this.sheet = false;
     this.leave = false;
   }
+
+  public onHome(){
+    if(this.route.url != '/five/lock-screen')
+      this.route.navigateByUrl('/five/home')
+  } 
 
 }

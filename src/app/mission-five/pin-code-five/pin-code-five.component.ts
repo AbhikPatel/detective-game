@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MissionFiveService } from '../mission-five.service';
 
 @Component({
   selector: 'app-pin-code-five',
@@ -9,7 +10,7 @@ export class PinCodeFiveComponent implements OnInit {
 
   public pincode: any = [];
   public animation = false;
-  constructor(private route: Router) { }
+  constructor(private route: Router, private service: MissionFiveService) { }
 
   ngOnInit(): void {
   }
@@ -23,8 +24,10 @@ export class PinCodeFiveComponent implements OnInit {
 
     if (this.route.url === '/five/pin-code') {
       if (this.pincode.length === 4) {
-        if (JSON.stringify(this.pincode) === '[5,2,9,9]')
+        if (JSON.stringify(this.pincode) === '[5,2,9,9]'){
           this.route.navigateByUrl('/five/vault')
+          this.service.vaultLock.next(false);
+        }
         else {
           this.animation = true;
           setTimeout(() => {
@@ -37,8 +40,10 @@ export class PinCodeFiveComponent implements OnInit {
 
     if (this.route.url === '/five/pin-notes') {
       if (this.pincode.length === 4) {
-        if (JSON.stringify(this.pincode) === '[1,0,2,3]')
-          this.route.navigateByUrl('/five/notes')
+        if (JSON.stringify(this.pincode) === '[1,0,2,3]'){
+          this.route.navigateByUrl('/five/notes');
+          this.service.appLock.next(false);
+        }
         else {
           this.animation = true;
           setTimeout(() => {

@@ -1,1 +1,14 @@
-<p>notes-five works!</p>
+<div class="h-100">
+    <div class="text-center py-5">
+        <h2> Notes </h2>
+        <p> 5 note </p>
+    </div>
+    <div class="row mx-2 g-2">
+        <div class="col-6" *ngFor="let m of notes">
+            <div class="note-card p-3 cursor" routerLink="{{m.route}}">
+                <h6 class="fw-bold"> {{m.heading}} </h6>
+                <p>{{m.data}}</p>
+            </div>
+        </div>
+    </div>
+</div>

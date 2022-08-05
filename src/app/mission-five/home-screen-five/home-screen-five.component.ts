@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MissionFiveService } from '../mission-five.service';
 
 @Component({
   selector: 'app-home-screen-five',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenFiveComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:MissionFiveService) { }
 
   ngOnInit(): void {
+    this.service.vaultLock.subscribe((data) => {
+      if(data === false)
+        this.application[1].route = '/five/vault'
+    })
   }
 
   public application: any[] = [
